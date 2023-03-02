@@ -1,0 +1,72 @@
+<!-- <ul class="list-group">
+  <button (click)="click()">click</button>
+  <li class="list-group-item" *ngFor="let item of list">
+    <div ngbDropdown class="d-inline-block">
+      <button
+        class="btn btn-outline-primary"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        Toggle dropdown {{ item }}
+      </button>
+      <div *ngIf="!clicked" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem routerLink="/guide-faq">Guides & FAQS</button>
+        <button ngbDropdownItem routerLink="/contact-us">Contact Us</button>
+        <div style="display:flex">
+          <button ngbDropdownItem routerLink="/feedback">Feedback</button>
+          <span (click)="click()">icon</span>
+        </div>
+      </div>
+      <div *ngIf="clicked" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem routerLink="/guide-faq">Guides click</button>
+        <button ngbDropdownItem routerLink="/contact-us">Contact click</button>
+        <div style="display:flex">
+          <button ngbDropdownItem routerLink="/feedback">Feedback click</button>
+          <span (click)="click()">iconn</span>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul> -->
+<div ngbDropdown class="d-inline-block">
+  <button
+    class="btn btn-primary"
+    id="toc-dropdown"
+    role="table of contents"
+    ngbDropdownToggle
+  >
+    Table Of Contentss
+  </button>
+  <div
+    cdkTrapFocus
+    *ngIf="!clicked"
+    ngbDropdownMenu
+    aria-labelledby="toc-dropdown"
+  >
+    <div class="d-flex justify-content-between p-2">
+      <h2 style="font-size: 18px">Table of Contents</h2>
+      <button
+        cdkFocusInitial
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+      ></button>
+    </div>
+
+    <hr class="mt-0" />
+    <div>
+      <button ngbDropdownItem routerLink="/guide-faq">
+        Module 3: Compute with Multi-Digit Numbers and Fractions
+      </button>
+      <button ngbDropdownItem routerLink="/contact-us">
+        Module 4: Integers, Rational Numbers, and the Coordinate Plane
+      </button>
+      <div style="display: flex">
+        <button ngbDropdownItem routerLink="/feedback">
+          Module 5: Numerical and Algebraic Expressions
+        </button>
+        <span class="dpg-icon dpg-icon-right-arrow" (click)="click()"></span>
+      </div>
+    </div>
+  </div>
+</div>
