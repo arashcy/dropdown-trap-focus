@@ -9,22 +9,14 @@ export class NgbdDropdownBasic {
   @ViewChild('closeBtn', { static: false }) closeBtn: ElementRef;
   @ViewChild('menu', { static: false }) menu: ElementRef;
 
-  constructor() {
-    window.addEventListener('keydown', (e) => {
-      console.log(e);
-    });
-  }
+  constructor() {}
 
-  open() {
-    try {
-      let keyboardEvent = new KeyboardEvent('keydown', {
-        key: 'Tab',
-        bubbles: true,
-      });
-      // console.log(this.toc);
-      this.menu.nativeElement.dispatchEvent(keyboardEvent);
-    } catch (e) {
-      console.log(e);
-    }
-  }
+  // open() {
+  //     let keyboardEvent = new KeyboardEvent('keydown', {
+  //       key: 'Tab',
+  //       bubbles: true,
+  //     });
+  //     // console.log(this.toc);
+  //     this.menu.nativeElement.dispatchEvent(keyboardEvent);
+  // }
 }
